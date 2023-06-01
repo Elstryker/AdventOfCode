@@ -78,7 +78,7 @@ const convertToPoints2 = (plays) => plays.map((x) => {
   return playPointsOutput(opponentPlayed, play);
 });
 
-export function Day1Part1() {
+export function Part1() {
   // const inp = help.readShortInputByDay(2);
   const inp = help.readInputByDay(2);
 
@@ -89,7 +89,7 @@ export function Day1Part1() {
   log('Part 1: ', sum);
 }
 
-export function Day1Part2() {
+export function Part2() {
   // const inp = help.readShortInputByDay(2);
   const inp = help.readInputByDay(2);
 
