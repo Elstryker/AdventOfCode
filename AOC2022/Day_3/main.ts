@@ -1,4 +1,3 @@
-import { log } from 'console';
 import * as help from '../Common/help.js';
 
 // Part 1
@@ -44,8 +43,8 @@ const getSharingItem = (rucksack) => {
 
 // Part 2
 
-const splitRucksacksIntoGroups = (rucksacks) => {
-  const groups = [];
+const splitRucksacksIntoGroups = (rucksacks: any[]) => {
+  const groups: any[] = [];
 
   for (let i = 0; i < Math.ceil(rucksacks.length / 3); i++) {
     groups.push(rucksacks.slice(i * 3, i * 3 + 3));
@@ -55,11 +54,11 @@ const splitRucksacksIntoGroups = (rucksacks) => {
 };
 
 const getCommonItem = (group) => {
-  const discoveredItems = [];
+  const discoveredItems: any[] = [];
 
   group.forEach((element, i) => {
     const previous = i - 1;
-    const elementItems = {};
+    const elementItems: any = {};
     let check = true;
     if (previous < 0) {
       check = false;
@@ -87,13 +86,13 @@ export function Part1() {
   const inp = help.readInputByDay(3);
 
   let rucksacks = inp.split('\n');
-  rucksacks = rucksacks
+  let total = rucksacks
     .map((x) => splitRucksack(x))
     .map((x) => getSharingItem(x))
     .map((x) => getItemPoints(x))
     .reduce((a, b) => a + b);
 
-  log('Part 1: ', rucksacks);
+  console.log('Part 1: ', total);
 }
 
 export function Part2() {
@@ -101,10 +100,10 @@ export function Part2() {
   const inp = help.readInputByDay(3);
 
   let rucksacks = inp.split('\n');
-  rucksacks = splitRucksacksIntoGroups(rucksacks)
+  let total = splitRucksacksIntoGroups(rucksacks)
     .map((x) => getCommonItem(x))
     .map((x) => getItemPoints(x))
     .reduce((a, b) => a + b);
 
-  log('Part 2: ', rucksacks);
+  console.log('Part 2: ', total);
 }
