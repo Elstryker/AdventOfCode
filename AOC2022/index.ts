@@ -8,6 +8,7 @@ import * as Day7 from "./Day_7/main";
 import * as Day8 from "./Day_8/main";
 import * as Day9 from "./Day_9/main";
 import * as Day10 from "./Day_10/main";
+import * as Day11 from "./Day_11/main";
 
 // Day1.Part1();
 // Day1.Part2();
@@ -36,5 +37,8 @@ import * as Day10 from "./Day_10/main";
 // Day9.Part1();
 // Day9.Part2();
 
-Day10.Part1();
-Day10.Part2();
+// Day10.Part1();
+// Day10.Part2();
+
+Day11.Part1();
+Day11.Part2();
